@@ -54,9 +54,23 @@ public class MyGdxGame implements ApplicationListener {
 		for (int i=0 ; i<25; i++){
 			Insecto p =new Insecto((int)(Math.random()*480),(int)(Math.random()*500),new Texture("data/insecto.png"));
 			s.addActor(p);
-			Insectos.add(p);	
-			Gdx.input.setInputProcessor(s);		
+			Insectos.add(p);		
 		}	
+		
+		
+		
+		for (int i=0 ; i<8; i++){
+			
+			Insecto pr =new Princesa ((int)(Math.random()*399),(int)(Math.random()*450));
+			s.addActor(pr);
+			Insectos.add(pr);
+		
+			}
+		Gdx.input.setInputProcessor(s);	
+		
+		Loser fi = new Loser ();
+		s.addActor(fi);
+		
 	}
 
 	@Override
